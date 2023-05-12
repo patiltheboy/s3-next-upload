@@ -33,8 +33,8 @@ const handler = async (req, res) => {
                 if (!req.file) {
                     return res.status(400).json({ status: "failed", msg: "Please Upload Image" });
                 }
-                if (!req.file) {
-                    return res.status(400).json({ status: "failed", msg: "Please Upload Image" });
+                if (!name) {
+                    return res.status(400).json({ status: "failed", msg: "Please Enter Name" });
                 }
 
                 let imagesKeys = await sharp(req.file.buffer)
